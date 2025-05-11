@@ -1,0 +1,335 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Global Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --mint: #d8f3dc;
+  --light-green: #b7e4c7;
+  --medium-green: #80b89a;
+  --forest-green: #52b788;
+  --deep-green: #2d6a4f;
+  --darkest-green: #1b4332;
+  --accent-green: #74c69d;
+  --black: #191b1a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('/public/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  color: var(--darkest-green);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Optional blur overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(220, 255, 220, 0.5); /* light green tint */
+  backdrop-filter: blur(6px);  /* applies the blur */
+  z-index: -1;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--deep-green);
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Form Card */
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(17, 113, 17, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 6px solid var(--accent-green);
+  max-width: 600px; /* 👈 restrict width on larger screens */
+  width: 90%;       /* 👈 still responsive on small devices */
+  margin: 0 auto; 
+}
+form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 100, 0, 0.18);
+}
+
+/* Inputs */
+input, textarea, select {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  border: 2px solid var(--light-green);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #f6fff8;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--black);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(to right, var(--medium-green), var(--forest-green));
+  color: white;
+  padding: 12px 24px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background: linear-gradient(to right, var(--deep-green), var(--darkest-green));
+  transform: scale(1.05);
+}
+
+
+/* Table Card */
+.table-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 100, 0, 0.1);
+  border-left: 6px solid var(--forest-green);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2f4ea;
+}
+
+th {
+  background: var(--light-green);
+  color: var(--darkest-green);
+  font-weight: 600;
+  border-bottom: 1px solid #ccc; /* Light gray line */
+}
+
+tr:hover {
+  background: var(--mint);
+  transition: background 0.3s ease;
+}
+.-row {
+  border-bottom: 1px solid #ccc; /* light gray or use a soft green */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  form, .table-card {
+    padding: 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+}
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Page Wrapper */
+.donation-page {
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.donation-page-container {
+  max-width: 900px; /* Limit max width for laptop screens */
+  width: 100%;
+  margin: 0 auto; /* Center content horizontally */
+  padding: 20px;
+}
+/* Header Styling */
+.page-header {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Donation List Container */
+.donation-list-wrapper {
+  margin-top: 2rem;
+  padding: 10px;
+}
+
+/* Table row bottom border */
+.donation-row {
+  border-bottom: 1px solid #b2dfdb;
+}
+
+/* Truncate long text in table cells */
+td {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Truncate long text in table cells */
+td {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .donation-page-container {
+    padding: 10px;
+  }
+  
+  .page-header {
+    font-size: 1.5rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  td {
+    max-width: 150px;
+  }
+}
+
+.eco-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(34, 139, 34, 0.1);
+  border-left: 6px solid #2e7d32;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eco-form input {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.eco-form input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.eco-form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.eco-form button:hover {
+  background-color: #388e3c;
+}
+
+

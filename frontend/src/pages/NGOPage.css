@@ -1,0 +1,252 @@
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #A5D6A7, #FFFFFF);
+    /* Soft green gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    background: rgb(137, 222, 125);
+    /* Donation form background */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 500;
+    color: #777777;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 500;
+    color: #444444;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.row>div {
+    flex: 1;
+}
+
+button {
+    margin-top: 25px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2C6E2F;
+}
+
+/* Form Background Update for Donation Form */
+form {
+    background: rgb(137, 222, 125);
+    /* Lush green like the donation form */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+/* Mobile Friendly Styles */
+@media screen and (max-width: 768px) {
+    body {
+        background: linear-gradient(135deg, #A5D6A7, #FFFFFF);
+    }
+
+    form {
+        padding: 20px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row>div {
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 18px;
+    }
+}
+
+/* Additional tweaks for very small devices (Portrait Mobile) */
+@media screen and (max-width: 480px) {
+    form {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* NGO Page Specific */
+.ngo-page {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #A5D6A7, #FFFFFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.ngo-header {
+    text-align: center;
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.ngo-header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #4CAF50;
+    margin: 10px auto;
+}
+
+/* NGO List Styling */
+.ngo-list {
+    margin-top: 50px;
+    overflow-x: auto;
+}
+
+.ngo-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.ngo-list th,
+.ngo-list td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.ngo-list th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.ngo-list td {
+    background-color: #f9f9f9;
+}
+
+.ngo-list button {
+    background-color: #F44336;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.ngo-list button:hover {
+    background-color: #D32F2F;
+}
+
+/* Mobile Friendly for NGO Page */
+@media screen and (max-width: 768px) {
+    .ngo-page {
+        padding: 15px;
+    }
+
+    .ngo-header {
+        font-size: 24px;
+    }
+
+    form,
+    .ngo-list {
+        padding: 20px;
+    }
+
+    .ngo-list table {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ngo-header {
+        font-size: 20px;
+    }
+
+    .ngo-list table {
+        font-size: 12px;
+    }
+}
