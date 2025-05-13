@@ -7,7 +7,7 @@ This is a full-stack JavaScript project built using **React.js (frontend)**, **N
 
 ## 🔧 Technologies Used
 
-* **Frontend**: React.js, HTML5, CSS3, JavaScript
+* **Frontend**: React.js, HTML5, CSS3, JavaScript,bootstrap5
 * **Backend**: Node.js, Express.js
 * **Database**: MySQL (phpMyAdmin)
 * **Styling**: Custom CSS
